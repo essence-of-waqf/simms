@@ -218,7 +218,7 @@ execfile('%s/casasm.py')
     tmpfile = casa_script.name
     t0 = time.time()
     logfile = 'log-simms.txt'
-    command = ['casa', '--nologger', '--log2term', 
+    command = ['casa', '--nologger', '--log2term','--nogui', 
                   '%s'%('--nologfile' if nolog else '--logfile %s'%logfile),'-c',tmpfile]
     tmpdir = tempfile.mkdtemp(dir='.')
 
